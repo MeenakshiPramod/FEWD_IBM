@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Waste Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Eco-Waste Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#log-waste">Log Waste</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#guidance">Guidance & Information</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#goals">Goals</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="log-waste">
+            <h2>Log Your Waste</h2>
+            <form id="waste-form">
+                <label for="waste-type">Type of Waste:</label>
+                <select id="waste-type">
+                    <option value="Plastic">Plastic</option>
+                    <option value="Paper">Paper</option>
+                    <option value="Organic">Organic</option>
+                    <option value="Glass">Glass</option>
+                    <option value="Metal">Metal</option>
+                </select>
+                <label for="waste-quantity">Quantity (kg):</label>
+                <input type="number" id="waste-quantity">
+                <button type="button" onclick="logWaste()">Log Waste</button>
+            </form>
+        </section>
+        <section id="dashboard">
+            <h2>Analytics Dashboard</h2>
+            <canvas id="waste-bar-chart"></canvas>
+            <canvas id="waste-pie-chart"></canvas>
+        </section>
+        <section id="guidance">
+            <h2>Guidance & Information</h2>
+            <h3>Types of Waste and Disposal Methods</h3>
+            <ul>
+                <li><strong>Plastic:</strong> Recycle plastics by segregating them into PET, HDPE, and others. Avoid single-use plastics.</li>
+                <li><strong>Paper:</strong> Recycle paper products like newspapers, cardboard, and office paper. Reduce usage by opting for digital alternatives.</li>
+                <li><strong>Organic:</strong> Compost organic waste such as food scraps and yard waste. Use the compost in gardening.</li>
+                <li><strong>Glass:</strong> Recycle glass bottles and jars. Separate by color if required by local recycling programs.</li>
+                <li><strong>Metal:</strong> Recycle metal cans, foil, and scrap metal. Rinse and clean them before disposal.</li>
+            </ul>
+            <h3>Guidelines for Managing Waste Efficiently</h3>
+            <ul>
+                <li>Reduce: Minimize waste generation by choosing reusable products and buying in bulk.</li>
+                <li>Reuse: Repurpose items instead of discarding them. Donate usable items to those in need.</li>
+                <li>Recycle: Sort waste into recyclable categories and follow local recycling guidelines.</li>
+                <li>Compost: Convert organic waste into valuable compost for gardening and agriculture.</li>
+                <li>Educate: Spread awareness about waste management practices in your community.</li>
+            </ul>
+        </section>
+        <section id="community">
+            <h2>Community Sharing</h2>
+            <form id="community-form">
+                <label for="community-message">Share your progress or tips:</label>
+                <textarea id="community-message" rows="4"></textarea>
+                <button type="button" onclick="shareMessage()">Share</button>
+            </form>
+            <div id="community-messages"></div>
+        </section>
+        <section id="goals">
+            <h2>Set Your Goals</h2>
+            <form id="goal-form">
+                <label for="goal">Goal Description:</label>
+                <input type="text" id="goal">
+                <button type="button" onclick="setGoal()">Set Goal</button>
+            </form>
+            <div id="goal-list"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
